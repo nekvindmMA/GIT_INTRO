@@ -16,12 +16,20 @@ gcd <- function(a, b) {
   return(a)
 }
 
+lcm <- function(a, b) {
+  return(abs(a * b) / gcd(a, b))
+}
+
 # input values
 a = as.integer(readline("Enter the first number: "))
 b = as.integer(readline("Enter the second number: "))
 
 # compute gcd
-result <- gcd(a, b)
+gcd_ab <- gcd(a, b)
+# compute lcm
+lcm_ab <- lcm(a, b)
 
 #print results
-print(paste('Greatest common divider of', a, 'and', b, 'is', result))
+print(paste('Greatest common divider of', a, 'and', b, 'is', gcd_ab))
+print(paste('Lowest common multiplier of', a, 'and', b, 'is', lcm_ab))
+
